@@ -218,6 +218,7 @@
 				B1B751FD233D28D9002C83F2 /* Sources */,
 				B1B751FE233D28D9002C83F2 /* Frameworks */,
 				B1B751FF233D28D9002C83F2 /* Resources */,
+				C065D4AA07FD269149113557 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -378,6 +379,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		C065D4AA07FD269149113557 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookSeekerUITests/Pods-BookSeekerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookSeekerUITests/Pods-BookSeekerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookSeekerUITests/Pods-BookSeekerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		E35F8A17767BB3B0796717F7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
