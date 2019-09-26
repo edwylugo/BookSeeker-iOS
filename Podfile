@@ -7,6 +7,7 @@ target 'BookSeeker' do
 
   # Pods for BookSeeker
   pod 'SwiftLint', '~> 0.33'
+  pod 'Alamofire', '~> 5.0.0-rc.2', :inhibit_warnings => true
 
   target 'BookSeekerTests' do
     inherit! :search_paths

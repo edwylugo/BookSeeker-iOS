@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-BookSeeker/Pods-BookSeeker-frameworks.sh
-${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
