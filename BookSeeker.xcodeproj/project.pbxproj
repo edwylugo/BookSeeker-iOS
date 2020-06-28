@@ -10,6 +10,10 @@
 		0DC3E15232745E2BF195F1E2 /* Pods_BookSeeker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7DABA4F1A32A629ADE4365 /* Pods_BookSeeker.framework */; };
 		1451638F95674B6B896555DC /* Pods_BookSeekerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9409A16A258352BDE9835E /* Pods_BookSeekerUITests.framework */; };
 		373B6438053999DC83BA177F /* Pods_BookSeekerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDE1357A6E29AFB7E8D4634 /* Pods_BookSeekerTests.framework */; };
+		59136A6B24A8ED6D00A03FC9 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59136A6A24A8ED6D00A03FC9 /* Observable.swift */; };
+		59136A6D24A8ED9900A03FC9 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59136A6C24A8ED9900A03FC9 /* CheckInternet.swift */; };
+		59136A7024A8EDF800A03FC9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59136A6F24A8EDF800A03FC9 /* CoordinatorProtocol.swift */; };
+		59136A7224A8EE1C00A03FC9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59136A7124A8EE1C00A03FC9 /* NavigationController.swift */; };
 		B1B751E4233D28D6002C83F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E3233D28D6002C83F2 /* AppDelegate.swift */; };
 		B1B751E6233D28D6002C83F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E5233D28D6002C83F2 /* SceneDelegate.swift */; };
 		B1B751E8233D28D6002C83F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E7233D28D6002C83F2 /* ViewController.swift */; };
@@ -43,6 +47,10 @@
 		30CCE24FC0F04856C4A4D9F1 /* Pods-BookSeekerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSeekerTests.debug.xcconfig"; path = "Target Support Files/Pods-BookSeekerTests/Pods-BookSeekerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		31B8D881FA8E490F13BFE945 /* Pods-BookSeeker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSeeker.release.xcconfig"; path = "Target Support Files/Pods-BookSeeker/Pods-BookSeeker.release.xcconfig"; sourceTree = "<group>"; };
 		4F7DABA4F1A32A629ADE4365 /* Pods_BookSeeker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookSeeker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59136A6A24A8ED6D00A03FC9 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		59136A6C24A8ED9900A03FC9 /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
+		59136A6F24A8EDF800A03FC9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		59136A7124A8EE1C00A03FC9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		5CDE1357A6E29AFB7E8D4634 /* Pods_BookSeekerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookSeekerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DAC13EAF88A98321EF9729 /* Pods-BookSeekerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSeekerTests.release.xcconfig"; path = "Target Support Files/Pods-BookSeekerTests/Pods-BookSeekerTests.release.xcconfig"; sourceTree = "<group>"; };
 		B1B751E0233D28D6002C83F2 /* BookSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +99,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59136A6824A8EC5A00A03FC9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				59136A6924A8ECE100A03FC9 /* TabBarApp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		59136A6924A8ECE100A03FC9 /* TabBarApp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBarApp;
+			sourceTree = "<group>";
+		};
+		59136A6E24A8EDE500A03FC9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				59136A6F24A8EDF800A03FC9 /* CoordinatorProtocol.swift */,
+				59136A7124A8EE1C00A03FC9 /* NavigationController.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		98F9D695D3979560F9D50360 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +171,12 @@
 		B1B751E2233D28D6002C83F2 /* BookSeeker */ = {
 			isa = PBXGroup;
 			children = (
+				59136A6E24A8EDE500A03FC9 /* Coordinator */,
 				B1B751E3233D28D6002C83F2 /* AppDelegate.swift */,
 				B1B751E5233D28D6002C83F2 /* SceneDelegate.swift */,
+				59136A6A24A8ED6D00A03FC9 /* Observable.swift */,
+				59136A6C24A8ED9900A03FC9 /* CheckInternet.swift */,
+				59136A6824A8EC5A00A03FC9 /* Scenes */,
 				B1B751E7233D28D6002C83F2 /* ViewController.swift */,
 				B1B751E9233D28D6002C83F2 /* Main.storyboard */,
 				B1B751EC233D28D8002C83F2 /* Assets.xcassets */,
@@ -426,9 +462,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59136A6B24A8ED6D00A03FC9 /* Observable.swift in Sources */,
 				B1B751E8233D28D6002C83F2 /* ViewController.swift in Sources */,
+				59136A7024A8EDF800A03FC9 /* CoordinatorProtocol.swift in Sources */,
 				B1B751E4233D28D6002C83F2 /* AppDelegate.swift in Sources */,
 				B1B751E6233D28D6002C83F2 /* SceneDelegate.swift in Sources */,
+				59136A7224A8EE1C00A03FC9 /* NavigationController.swift in Sources */,
+				59136A6D24A8ED9900A03FC9 /* CheckInternet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +643,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83NFHDY43B;
 				INFOPLIST_FILE = BookSeeker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -621,6 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83NFHDY43B;
 				INFOPLIST_FILE = BookSeeker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
