@@ -10,8 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func goTabBarApp(_ sender: Any) {
+        let coordinator = InitialCoordinator(presenter: self.navigationController!)
+        coordinator.start()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 }

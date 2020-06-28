@@ -27,4 +27,3 @@ final class Observable<T> {
         value = object
     }
 }
-
