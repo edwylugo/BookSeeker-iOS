@@ -10,10 +10,10 @@ import Foundation
 
 protocol TabBarAppNavigationProtocol: AnyObject {}
 
-protocol TabBarAppViewModelProtocol: AnyObject {}
+protocol TabBarAppViewModelProtocol {}
 
 struct TabBarAppViewModel {
-    private weak var navigationDelegate: TabBarAppNavigationProtocol?
+    private var navigationDelegate: TabBarAppNavigationProtocol
 
     init(navigationDelegate: TabBarAppNavigationProtocol) {
         self.navigationDelegate = navigationDelegate

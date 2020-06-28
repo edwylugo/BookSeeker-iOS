@@ -8,7 +8,10 @@
 
 import UIKit
 
-class TabBarAppViewController: UITabBarController, UITabBarControllerDelegate  {
+class TabBarAppViewController: UITabBarController, UITabBarControllerDelegate {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -17,38 +20,60 @@ class TabBarAppViewController: UITabBarController, UITabBarControllerDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        setTitles(navigationTitle: "Search", tabBarTitle: "Em Processo")
+        title = "Reading Now"
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
 
         // Custom Tab bar
-        self.tabBar.barTintColor = UIColor(named: "black")
-        UITabBar.appearance().tintColor = UIColor(named: "white")
-        UITabBar.appearance().barTintColor = UIColor(named: "black")
+        self.tabBar.barTintColor = UIColor(named: "gray")
+        UITabBar.appearance().tintColor = UIColor(named: "black")
+        UITabBar.appearance().barTintColor = UIColor(named: "gray")
         UITabBar.appearance().unselectedItemTintColor = .lightGray
         UITabBar.appearance().isTranslucent = true
 
-        //let viewModelListNotes = ListNotesViewModel(navigationDelegate: self)
-        let tabOne = SearchViewController()
-        let tabOneBarItem1 = UITabBarItem(title: "Search", image: UIImage(systemName: "lock.open"), selectedImage: UIImage(systemName: "lock.open.fill"))
-        tabOne.tabBarItem = tabOneBarItem1
+        let viewModelReadingNow = ReadingNowViewModel(navigationDelegate: self)
+        let tabOne = ReadingNowViewController(viewModel: viewModelReadingNow)
+        let tabOneBarItem = UITabBarItem(title: "Reading Now", image: UIImage(systemName: "book.fill"), selectedImage: UIImage(systemName: "book.fill"))
+        tabOne.tabBarItem = tabOneBarItem
 
-//        let viewModelListNotesOnline = NotesOnlineViewModel(navigationDelegate: self)
-//        let tabTwo = NotesOnlineViewController(viewModel: viewModelListNotesOnline)
-//        let tabTwoBarItem2 = UITabBarItem(title: "Encerradas", image: UIImage(systemName: "lock"), selectedImage: UIImage(systemName: "lock.fill"))
-//        tabTwo.tabBarItem = tabTwoBarItem2
+        let viewModelLibrary = LibraryViewModel(navigationDelegate: self)
+        let tabTwo = LibraryViewController(viewModel: viewModelLibrary)
+        let tabTwoBarItem = UITabBarItem(title: "Library", image: UIImage(systemName: "heart.fill"), selectedImage: UIImage(systemName: "heart.fill"))
+        tabTwo.tabBarItem = tabTwoBarItem
 
-        self.viewControllers = [tabOne]
+        let viewModelBookStore = BookStoreViewModel(navigationDelegate: self)
+        let tabThree = BookStoreViewController(viewModel: viewModelBookStore)
+        let tabThreeBarItem = UITabBarItem(title: "Book Store", image: UIImage(systemName: "bag.fill"), selectedImage: UIImage(systemName: "bag.fill"))
+        tabThree.tabBarItem = tabThreeBarItem
+
+        let viewModelSearch = SearchViewModel(navigationDelegate: self)
+        let tabFour = SearchViewController(viewModel: viewModelSearch)
+        let tabFourBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass"))
+        tabFour.tabBarItem = tabFourBarItem
+        self.viewControllers = [tabOne, tabTwo, tabThree, tabFour]
     }
-    func navigationController(navigationController _: UINavigationController, willShowViewController viewController: UIViewController, animated _: Bool) {
-        if viewController.isKind(of: SearchViewController.self) {
-            self.navigationController?.tabBarItem.title = "Search"
+    
+    func tabBarController(_: UITabBarController, didSelect viewController: UIViewController) {
+        if viewController.isKind(of: ReadingNowViewController.self) {
+             self.navigationItem.title = "Reading Now"
+        } else if viewController.isKind(of: LibraryViewController.self) {
+             self.navigationItem.title = "Library"
+        } else if viewController.isKind(of: BookStoreViewController.self) {
+            self.navigationItem.title = "Book Store"
+        } else {
+            self.navigationItem.title = "Search"
         }
     }
-    func setTitles(navigationTitle: String, tabBarTitle: String) {
-           self.title = tabBarTitle
-           self.navigationItem.title = navigationTitle
-       }
-
+    
+     
 }
+
+extension TabBarAppViewController: ReadingNowNavigationProtocol { }
+extension TabBarAppViewController: LibraryNavigationProtocol { }
+extension TabBarAppViewController: BookStoreNavigationProtocol { }
+extension TabBarAppViewController: SearchNavigationProtocol { }

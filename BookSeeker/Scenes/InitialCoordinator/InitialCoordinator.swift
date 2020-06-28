@@ -6,12 +6,10 @@
 //  Copyright © 2020 CIT. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 final class InitialCoordinator: Coordinator {
-    
-var childCoordinators: [Coordinator] = []
+   var childCoordinators: [Coordinator] = []
    private let presenter: UINavigationController
 
    init(presenter: UINavigationController) {

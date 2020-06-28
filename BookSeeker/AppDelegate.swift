@@ -15,15 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        UINavigationBar.appearance().barStyle = .black
-        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().tintColor = .black
         UINavigationBar.appearance().prefersLargeTitles = true
-        UINavigationBar.appearance().barStyle = .black
-        UINavigationBar.appearance().isTranslucent = false
-        //UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont(name: "Roboto-Black", size: 27)!]
+        UINavigationBar.appearance().barStyle = .default
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black, .font: UIFont(name: "Roboto-Black", size: 27)!]
 
-        
         return true
     }
 
