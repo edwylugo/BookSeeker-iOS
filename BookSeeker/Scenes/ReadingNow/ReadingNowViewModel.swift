@@ -8,12 +8,15 @@
 
 import Foundation
 
-protocol ReadingNowNavigationProtocol: AnyObject {}
+protocol ReadingNowNavigationProtocol: AnyObject {
+    func gotoBookDetail(books: Book)
+}
 
 protocol ReadingNowViewModelProtocol {
     var dataSource: Observable<[Book]> { get }
     var error: Observable<Error?> { get }
     func setDataSource()
+    func didSelectItemAt(indexPath: IndexPath)
 }
 
 struct ReadingNowViewModel: ReadingNowViewModelProtocol {
@@ -30,7 +33,7 @@ struct ReadingNowViewModel: ReadingNowViewModelProtocol {
     func setDataSource() {
         
         BookREST.loadBook(onComplete: { books in
-            self.dataSource.value = books.results.ordenationsToBook() 
+            self.dataSource.value = books.results.ordenationsToBook()
         }) { error in
             DispatchQueue.main.async {
                 print(error)
@@ -53,6 +56,12 @@ struct ReadingNowViewModel: ReadingNowViewModelProtocol {
         }
         
     }
+    
+    func didSelectItemAt(indexPath: IndexPath) {
+          guard dataSource.value.indices.contains(indexPath.row) else { return }
+          let item = dataSource.value[indexPath.row]
+          navigationDelegate?.gotoBookDetail(books: item)
+      }
 }
 
 extension Sequence where Iterator.Element == Book {

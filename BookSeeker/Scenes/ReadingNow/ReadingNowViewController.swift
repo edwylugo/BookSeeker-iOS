@@ -73,6 +73,6 @@ extension ReadingNowViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        viewModel.didSelectItemAt(indexPath: indexPath)
+        viewModel.didSelectItemAt(indexPath: indexPath)
     }
 }

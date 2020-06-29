@@ -67,7 +67,17 @@ class TabBarAppViewController: UITabBarController, UITabBarControllerDelegate {
     }
 }
 
-extension TabBarAppViewController: ReadingNowNavigationProtocol { }
+extension TabBarAppViewController: ReadingNowNavigationProtocol {
+    func gotoBookDetail(books: Book) {
+        let viewModel = BookDetailViewModel(navigationDelegate: self, books: books)
+        let viewController = BookDetailViewController(viewModel: viewModel)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
 extension TabBarAppViewController: LibraryNavigationProtocol { }
 extension TabBarAppViewController: BookStoreNavigationProtocol { }
 extension TabBarAppViewController: SearchNavigationProtocol { }
+extension TabBarAppViewController: BookDetailNavigationProtocol { }
+
+
