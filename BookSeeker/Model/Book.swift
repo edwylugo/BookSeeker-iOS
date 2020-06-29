@@ -19,6 +19,16 @@ public struct Book: Codable {
     let genres: [String]
     let formattedPrice: String
     let trackViewUrl: String
+    var price: String? {
+        var result: String = ""
+        
+        if formattedPrice == "Free" {
+            result = "Gratuito"
+        } else {
+            result = formattedPrice
+        }
+        return result
+    }
 
     enum CodingKeys: String, CodingKey {
         case bookId = "trackId"

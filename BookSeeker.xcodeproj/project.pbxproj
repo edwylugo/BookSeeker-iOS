@@ -54,6 +54,8 @@
 		59136AE724A9715C00A03FC9 /* ReadingNowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59136AE524A9715C00A03FC9 /* ReadingNowTableViewCell.swift */; };
 		59136AE824A9715C00A03FC9 /* ReadingNowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59136AE624A9715C00A03FC9 /* ReadingNowTableViewCell.xib */; };
 		59A1277A24AA4093000CBF90 /* LibraryUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A1277924AA4093000CBF90 /* LibraryUserDefaults.swift */; };
+		59A1278324AA67F5000CBF90 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A1278124AA67F5000CBF90 /* SearchTableViewCell.swift */; };
+		59A1278424AA67F5000CBF90 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59A1278224AA67F5000CBF90 /* SearchTableViewCell.xib */; };
 		B1B751E4233D28D6002C83F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E3233D28D6002C83F2 /* AppDelegate.swift */; };
 		B1B751E6233D28D6002C83F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E5233D28D6002C83F2 /* SceneDelegate.swift */; };
 		B1B751E8233D28D6002C83F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E7233D28D6002C83F2 /* ViewController.swift */; };
@@ -131,6 +133,8 @@
 		59136AE524A9715C00A03FC9 /* ReadingNowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingNowTableViewCell.swift; sourceTree = "<group>"; };
 		59136AE624A9715C00A03FC9 /* ReadingNowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadingNowTableViewCell.xib; sourceTree = "<group>"; };
 		59A1277924AA4093000CBF90 /* LibraryUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryUserDefaults.swift; sourceTree = "<group>"; };
+		59A1278124AA67F5000CBF90 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		59A1278224AA67F5000CBF90 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		B1B751E0233D28D6002C83F2 /* BookSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B751E3233D28D6002C83F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B751E5233D28D6002C83F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		59136A7D24A8F2D600A03FC9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				59A1278024AA67DD000CBF90 /* Cell */,
 				59136A7F24A8F30500A03FC9 /* SearchViewController.swift */,
 				59136A8024A8F30500A03FC9 /* SearchViewController.xib */,
 				59136AC024A903FE00A03FC9 /* SeachViewModel.swift */,
@@ -355,6 +360,15 @@
 				59A1277924AA4093000CBF90 /* LibraryUserDefaults.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		59A1278024AA67DD000CBF90 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				59A1278124AA67F5000CBF90 /* SearchTableViewCell.swift */,
+				59A1278224AA67F5000CBF90 /* SearchTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		98F9D695D3979560F9D50360 /* Pods */ = {
@@ -565,6 +579,7 @@
 				B1B751EB233D28D6002C83F2 /* Main.storyboard in Resources */,
 				59136AA424A8F83000A03FC9 /* Roboto-Bold.ttf in Resources */,
 				59136ACE24A9424000A03FC9 /* book-response.json in Resources */,
+				59A1278424AA67F5000CBF90 /* SearchTableViewCell.xib in Resources */,
 				59136AA624A8F83000A03FC9 /* Roboto-BoldCondensed.ttf in Resources */,
 				59136A9A24A8F83000A03FC9 /* Roboto-Black.ttf in Resources */,
 			);
@@ -654,6 +669,7 @@
 				59136AC824A91ED900A03FC9 /* BookREST.swift in Sources */,
 				59136AC524A9175800A03FC9 /* CommonToUI.swift in Sources */,
 				59136A7224A8EE1C00A03FC9 /* NavigationController.swift in Sources */,
+				59A1278324AA67F5000CBF90 /* SearchTableViewCell.swift in Sources */,
 				59136A6D24A8ED9900A03FC9 /* CheckInternet.swift in Sources */,
 				59136A7C24A8F1B300A03FC9 /* TabBarAppViewModel.swift in Sources */,
 				59136AB424A8FAC200A03FC9 /* LibraryViewController.swift in Sources */,
