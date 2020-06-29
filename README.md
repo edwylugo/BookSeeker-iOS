@@ -28,10 +28,9 @@ List ebook, add favorite and remove favorite, ebook details, search book specifi
 ## Follow the instructions to run the project. ##
 1. Clone the repository using Sourcetree or GitHub Desktop
 2. Run via finish and locate the project folder and install the pods
-3. Run carthage update
-4. Install Xcode 11.5
-5. Open Xcode, click on 'Open ... and select the BookSeeker.xcworkspace project.
-6. Run the app. Click 'Run'.
+3. Install Xcode 11.5
+4. Open Xcode, click on 'Open ... and select the BookSeeker.xcworkspace project.
+5. Run the app. Click 'Run'.
 
 ### Construction Technician ###
 
