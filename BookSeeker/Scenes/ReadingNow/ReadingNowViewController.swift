@@ -28,6 +28,9 @@ class ReadingNowViewController: UIViewController , SFSafariViewControllerDelegat
         }
     }
     
+    var bookSelected: String = ""
+    var books: [String] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +64,15 @@ extension ReadingNowViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ReadingNowTableViewCell.reuseIdentifier,
                                                        for: indexPath) as? ReadingNowTableViewCell else { return UITableViewCell() }
-
+        
+        
+        if cell.addFavorite.isSelected {
+          let book = viewModel.dataSource.value[indexPath.row]
+          cell.item = book.name
+          cell.imagem = book.cover
+          cell.urlSave = book.trackViewUrl
+        }
+        
         return cell
     }
 
@@ -69,21 +80,20 @@ extension ReadingNowViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = cell as? ReadingNowTableViewCell else { return }
         guard viewModel.dataSource.value.indices.contains(indexPath.row) else { return }
         let book = viewModel.dataSource.value[indexPath.row]
-        cell.setup(viewModel: book)
+        cell.setup(viewModel: book, indexPath: indexPath.row)
         
         
     }
 
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-       // viewModel.didSelectItemAt(indexPath: indexPath)
-        
+       
         guard viewModel.dataSource.value.indices.contains(indexPath.row) else { return }
         let book = viewModel.dataSource.value[indexPath.row]
         
         let svc = SFSafariViewController(url: NSURL(string: "\(book.trackViewUrl)")! as URL)
         self.present(svc, animated: true, completion: nil)
         svc.delegate = self
-
+        
     }
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {

@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryViewController" customModule="BookSeeker" customModuleProvider="target">
             <connections>
+                <outlet property="btFavorite" destination="63H-VN-Xfa" id="96k-VW-JTm"/>
+                <outlet property="lbMessage" destination="8aY-13-Yzr" id="hCo-A5-BaY"/>
+                <outlet property="tableViewLibrary" destination="5mx-nv-m1m" id="wZh-Gt-hzP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5mx-nv-m1m">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aY-13-Yzr">
+                    <rect key="frame" x="108.33333333333333" y="343" width="197.33333333333337" height="50.333333333333314"/>
+                    <string key="text">Você não adicionou 
+nenhum book favorito</string>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63H-VN-Xfa">
+                    <rect key="frame" x="8" y="393.33333333333331" width="398" height="37"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                    <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="heart" catalog="system"/>
+                </button>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="63H-VN-Xfa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="3E0-Nw-3eA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="63H-VN-Xfa" secondAttribute="trailing" constant="8" id="CKY-7I-MAj"/>
+                <constraint firstItem="5mx-nv-m1m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FKE-J1-niX"/>
+                <constraint firstItem="8aY-13-Yzr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TlC-H5-G8b"/>
+                <constraint firstItem="63H-VN-Xfa" firstAttribute="top" secondItem="8aY-13-Yzr" secondAttribute="bottom" id="WDI-af-795"/>
+                <constraint firstItem="5mx-nv-m1m" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Zgm-K0-BnK"/>
+                <constraint firstItem="5mx-nv-m1m" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="haK-bt-2Vc"/>
+                <constraint firstItem="8aY-13-Yzr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jvo-WJ-5Yb"/>
+                <constraint firstItem="5mx-nv-m1m" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="y5L-1B-xXh"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="112"/>
+            <point key="canvasLocation" x="137.68115942028987" y="111.68478260869566"/>
         </view>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+    </resources>
 </document>

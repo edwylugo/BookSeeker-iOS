@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,29 +24,46 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-yz-wbR">
-                        <rect key="frame" x="109" y="4" width="210" height="100"/>
-                        <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
+                        <rect key="frame" x="109" y="4" width="178" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="178" id="tSa-AH-ldH"/>
+                        </constraints>
+                        <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WW4-xv-Kjw">
+                        <rect key="frame" x="295" y="43" width="21" height="22"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="buttonPressedWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xyW-3s-2IB"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="I4e-yz-wbR" firstAttribute="bottom" secondItem="OB8-b8-qSf" secondAttribute="bottom" id="08S-SM-tmN"/>
                     <constraint firstItem="OB8-b8-qSf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="2Ki-QD-Mt0"/>
                     <constraint firstItem="I4e-yz-wbR" firstAttribute="leading" secondItem="OB8-b8-qSf" secondAttribute="trailing" constant="8" id="5qJ-17-YfI"/>
                     <constraint firstItem="I4e-yz-wbR" firstAttribute="top" secondItem="OB8-b8-qSf" secondAttribute="top" id="69n-UN-bC9"/>
-                    <constraint firstAttribute="trailing" secondItem="I4e-yz-wbR" secondAttribute="trailing" constant="1" id="B92-mC-3RX"/>
+                    <constraint firstAttribute="trailing" secondItem="WW4-xv-Kjw" secondAttribute="trailing" constant="4" id="blw-wO-eQf"/>
                     <constraint firstItem="OB8-b8-qSf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="fZ9-FY-tJy"/>
+                    <constraint firstItem="WW4-xv-Kjw" firstAttribute="centerY" secondItem="I4e-yz-wbR" secondAttribute="centerY" id="gXD-9u-oYS"/>
+                    <constraint firstItem="WW4-xv-Kjw" firstAttribute="leading" secondItem="I4e-yz-wbR" secondAttribute="trailing" constant="8" id="wBb-Fv-Mal"/>
                     <constraint firstAttribute="bottom" secondItem="OB8-b8-qSf" secondAttribute="bottom" constant="4" id="yPj-vq-EpA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addFavorite" destination="WW4-xv-Kjw" id="tbE-tS-e7A"/>
                 <outlet property="ivArtworkUrl60" destination="OB8-b8-qSf" id="PKx-tF-J9V"/>
                 <outlet property="lbTrackName" destination="I4e-yz-wbR" id="wpY-Ld-Vo3"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="133.59375"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+    </resources>
 </document>
