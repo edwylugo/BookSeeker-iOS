@@ -18,6 +18,7 @@ public struct Book: Codable {
     let rating: Double?
     let genres: [String]
     let formattedPrice: String
+    let trackViewUrl: String
 
     enum CodingKeys: String, CodingKey {
         case bookId = "trackId"
@@ -29,6 +30,7 @@ public struct Book: Codable {
         case rating = "averageUserRating"
         case genres
         case formattedPrice
+        case trackViewUrl
     }
 
     public init(from decoder: Decoder) throws {
@@ -42,6 +44,7 @@ public struct Book: Codable {
         artistUrl = try container.decode(String.self, forKey: .artistUrl)
         genres = try container.decode([String].self, forKey: .genres)
         formattedPrice = try container.decode(String.self, forKey: .formattedPrice)
+        trackViewUrl  = try container.decode(String.self, forKey: .trackViewUrl)
 
         let decodedRating = try? container.decode(Double.self, forKey: .rating)
         rating = decodedRating ?? nil

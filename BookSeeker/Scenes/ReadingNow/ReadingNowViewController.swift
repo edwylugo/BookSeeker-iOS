@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class ReadingNowViewController: UIViewController {
+class ReadingNowViewController: UIViewController , SFSafariViewControllerDelegate {
     private var viewModel: ReadingNowViewModelProtocol
     
     init(viewModel: ReadingNowViewModelProtocol) {
@@ -70,9 +71,22 @@ extension ReadingNowViewController: UITableViewDelegate, UITableViewDataSource {
         let book = viewModel.dataSource.value[indexPath.row]
         cell.setup(viewModel: book)
         
+        
     }
 
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelectItemAt(indexPath: indexPath)
+       // viewModel.didSelectItemAt(indexPath: indexPath)
+        
+        guard viewModel.dataSource.value.indices.contains(indexPath.row) else { return }
+        let book = viewModel.dataSource.value[indexPath.row]
+        
+        let svc = SFSafariViewController(url: NSURL(string: "\(book.trackViewUrl)")! as URL)
+        self.present(svc, animated: true, completion: nil)
+        svc.delegate = self
+
     }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+           controller.dismiss(animated: true, completion: nil)
+       }
 }

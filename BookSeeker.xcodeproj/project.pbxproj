@@ -53,9 +53,6 @@
 		59136ADE24A9672100A03FC9 /* BookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59136ADD24A9672100A03FC9 /* BookResponse.swift */; };
 		59136AE724A9715C00A03FC9 /* ReadingNowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59136AE524A9715C00A03FC9 /* ReadingNowTableViewCell.swift */; };
 		59136AE824A9715C00A03FC9 /* ReadingNowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59136AE624A9715C00A03FC9 /* ReadingNowTableViewCell.xib */; };
-		59136AEC24A97E3800A03FC9 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59136AEA24A97E3800A03FC9 /* BookDetailViewController.swift */; };
-		59136AED24A97E3800A03FC9 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59136AEB24A97E3800A03FC9 /* BookDetailViewController.xib */; };
-		59136AEF24A97E6600A03FC9 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59136AEE24A97E6600A03FC9 /* BookDetailViewModel.swift */; };
 		B1B751E4233D28D6002C83F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E3233D28D6002C83F2 /* AppDelegate.swift */; };
 		B1B751E6233D28D6002C83F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E5233D28D6002C83F2 /* SceneDelegate.swift */; };
 		B1B751E8233D28D6002C83F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E7233D28D6002C83F2 /* ViewController.swift */; };
@@ -132,9 +129,6 @@
 		59136ADD24A9672100A03FC9 /* BookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResponse.swift; sourceTree = "<group>"; };
 		59136AE524A9715C00A03FC9 /* ReadingNowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingNowTableViewCell.swift; sourceTree = "<group>"; };
 		59136AE624A9715C00A03FC9 /* ReadingNowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadingNowTableViewCell.xib; sourceTree = "<group>"; };
-		59136AEA24A97E3800A03FC9 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
-		59136AEB24A97E3800A03FC9 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
-		59136AEE24A97E6600A03FC9 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		B1B751E0233D28D6002C83F2 /* BookSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B751E3233D28D6002C83F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B751E5233D28D6002C83F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,7 +174,6 @@
 		59136A6824A8EC5A00A03FC9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				59136AE924A97E0B00A03FC9 /* BookDetail */,
 				59136A8524A8F6BC00A03FC9 /* InitialCoordinator */,
 				59136A8424A8F5CE00A03FC9 /* Start */,
 				59136A6924A8ECE100A03FC9 /* TabBarApp */,
@@ -351,16 +344,6 @@
 				59136AE624A9715C00A03FC9 /* ReadingNowTableViewCell.xib */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		59136AE924A97E0B00A03FC9 /* BookDetail */ = {
-			isa = PBXGroup;
-			children = (
-				59136AEA24A97E3800A03FC9 /* BookDetailViewController.swift */,
-				59136AEB24A97E3800A03FC9 /* BookDetailViewController.xib */,
-				59136AEE24A97E6600A03FC9 /* BookDetailViewModel.swift */,
-			);
-			path = BookDetail;
 			sourceTree = "<group>";
 		};
 		98F9D695D3979560F9D50360 /* Pods */ = {
@@ -564,7 +547,6 @@
 				59136A9C24A8F83000A03FC9 /* Roboto-MediumItalic.ttf in Resources */,
 				59136AB524A8FAC200A03FC9 /* LibraryViewController.xib in Resources */,
 				59136AA324A8F83000A03FC9 /* Roboto-CondensedItalic.ttf in Resources */,
-				59136AED24A97E3800A03FC9 /* BookDetailViewController.xib in Resources */,
 				59136AA724A8F83000A03FC9 /* Roboto-BoldItalic.ttf in Resources */,
 				59136A8224A8F30500A03FC9 /* SearchViewController.xib in Resources */,
 				59136AAA24A8F83000A03FC9 /* Roboto-BoldCondensedItalic.ttf in Resources */,
@@ -644,7 +626,6 @@
 				59136A8124A8F30500A03FC9 /* SearchViewController.swift in Sources */,
 				59136AD024A945D000A03FC9 /* BookManager.swift in Sources */,
 				59136ABD24A903E500A03FC9 /* LibraryViewModel.swift in Sources */,
-				59136AEC24A97E3800A03FC9 /* BookDetailViewController.swift in Sources */,
 				59136AB024A8FA9500A03FC9 /* ReadingNowViewController.swift in Sources */,
 				59136A6B24A8ED6D00A03FC9 /* Observable.swift in Sources */,
 				B1B751E8233D28D6002C83F2 /* ViewController.swift in Sources */,
@@ -656,7 +637,6 @@
 				59136A7924A8F0AE00A03FC9 /* TabBarAppViewController.swift in Sources */,
 				59136ADE24A9672100A03FC9 /* BookResponse.swift in Sources */,
 				59136AC124A903FE00A03FC9 /* SeachViewModel.swift in Sources */,
-				59136AEF24A97E6600A03FC9 /* BookDetailViewModel.swift in Sources */,
 				B1B751E6233D28D6002C83F2 /* SceneDelegate.swift in Sources */,
 				59136ADC24A962D900A03FC9 /* Book.swift in Sources */,
 				59136AB824A8FBCA00A03FC9 /* BookStoreViewController.swift in Sources */,
