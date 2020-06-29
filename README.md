@@ -6,15 +6,6 @@ Integrated application with ITUNES API
 
 List ebook, add favorite and remove favorite, ebook details, search book specific.  
 
-### Modelos de iPhone Compatíveis ###
-
-Principais:
-
-| Modelo: | 8      | 8 Plus | X     | XR     | XS     | XS Max | 11 | 11 Pro | Pro Max |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
-
-Outros iPhones: SE, 6S, 6S Plus, 7 Plus, e 7.  
-
 ### IOS App Version Control ###
 
 | Version | Build |  Developer | Branch |
