@@ -25,10 +25,7 @@ class TabBarAppViewController: UITabBarController, UITabBarControllerDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationItem.setHidesBackButton(true, animated: true)
-
-
         // Custom Tab bar
         self.tabBar.barTintColor = UIColor(named: "gray")
         UITabBar.appearance().tintColor = UIColor(named: "black")
@@ -57,7 +54,6 @@ class TabBarAppViewController: UITabBarController, UITabBarControllerDelegate {
         tabFour.tabBarItem = tabFourBarItem
         self.viewControllers = [tabOne, tabTwo, tabThree, tabFour]
     }
-    
     func tabBarController(_: UITabBarController, didSelect viewController: UIViewController) {
         if viewController.isKind(of: ReadingNowViewController.self) {
              self.navigationItem.title = "Reading Now"
@@ -69,8 +65,6 @@ class TabBarAppViewController: UITabBarController, UITabBarControllerDelegate {
             self.navigationItem.title = "Search"
         }
     }
-    
-     
 }
 
 extension TabBarAppViewController: ReadingNowNavigationProtocol { }
