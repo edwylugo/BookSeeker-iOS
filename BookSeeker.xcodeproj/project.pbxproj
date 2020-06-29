@@ -56,6 +56,8 @@
 		59A1277A24AA4093000CBF90 /* LibraryUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A1277924AA4093000CBF90 /* LibraryUserDefaults.swift */; };
 		59A1278324AA67F5000CBF90 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A1278124AA67F5000CBF90 /* SearchTableViewCell.swift */; };
 		59A1278424AA67F5000CBF90 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59A1278224AA67F5000CBF90 /* SearchTableViewCell.xib */; };
+		59A1278624AA73E9000CBF90 /* 19651-gdhbh.json in Resources */ = {isa = PBXBuildFile; fileRef = 59A1278524AA73E9000CBF90 /* 19651-gdhbh.json */; };
+		59A1278824AA750F000CBF90 /* 18123-developer.json in Resources */ = {isa = PBXBuildFile; fileRef = 59A1278724AA750E000CBF90 /* 18123-developer.json */; };
 		B1B751E4233D28D6002C83F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E3233D28D6002C83F2 /* AppDelegate.swift */; };
 		B1B751E6233D28D6002C83F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E5233D28D6002C83F2 /* SceneDelegate.swift */; };
 		B1B751E8233D28D6002C83F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B751E7233D28D6002C83F2 /* ViewController.swift */; };
@@ -135,6 +137,8 @@
 		59A1277924AA4093000CBF90 /* LibraryUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryUserDefaults.swift; sourceTree = "<group>"; };
 		59A1278124AA67F5000CBF90 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		59A1278224AA67F5000CBF90 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		59A1278524AA73E9000CBF90 /* 19651-gdhbh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "19651-gdhbh.json"; sourceTree = "<group>"; };
+		59A1278724AA750E000CBF90 /* 18123-developer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "18123-developer.json"; sourceTree = "<group>"; };
 		B1B751E0233D28D6002C83F2 /* BookSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B751E3233D28D6002C83F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B751E5233D28D6002C83F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -413,6 +417,8 @@
 		B1B751E2233D28D6002C83F2 /* BookSeeker */ = {
 			isa = PBXGroup;
 			children = (
+				59A1278724AA750E000CBF90 /* 18123-developer.json */,
+				59A1278524AA73E9000CBF90 /* 19651-gdhbh.json */,
 				59136ACC24A9422700A03FC9 /* Stubs */,
 				59136AC924A91FBB00A03FC9 /* Model */,
 				59136AC624A91EC400A03FC9 /* API */,
@@ -564,11 +570,13 @@
 				B1B751ED233D28D8002C83F2 /* Assets.xcassets in Resources */,
 				59136AA524A8F83000A03FC9 /* Roboto-Italic.ttf in Resources */,
 				59136AA824A8F83000A03FC9 /* Roboto-BlackItalic.ttf in Resources */,
+				59A1278624AA73E9000CBF90 /* 19651-gdhbh.json in Resources */,
 				59136A9F24A8F83000A03FC9 /* Roboto-Thin.ttf in Resources */,
 				59136AB124A8FA9500A03FC9 /* ReadingNowViewController.xib in Resources */,
 				59136AA024A8F83000A03FC9 /* Roboto-Condensed.ttf in Resources */,
 				59136AE824A9715C00A03FC9 /* ReadingNowTableViewCell.xib in Resources */,
 				59136A9B24A8F83000A03FC9 /* Roboto-Medium.ttf in Resources */,
+				59A1278824AA750F000CBF90 /* 18123-developer.json in Resources */,
 				59136A9C24A8F83000A03FC9 /* Roboto-MediumItalic.ttf in Resources */,
 				59136AB524A8FAC200A03FC9 /* LibraryViewController.xib in Resources */,
 				59136AA324A8F83000A03FC9 /* Roboto-CondensedItalic.ttf in Resources */,

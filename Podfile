@@ -8,6 +8,7 @@ target 'BookSeeker' do
   pod 'Moya'
   pod 'Kingfisher'
   #pod 'SwiftLint'
+  pod 'lottie-ios'
   end
 
 

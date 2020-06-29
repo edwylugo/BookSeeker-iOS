@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookStoreViewController" customModule="BookSeeker" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="1Z6-Cv-vtz" id="q26-ah-wjz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +18,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em desenvolvimento..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmw-KY-05S">
-                    <rect key="frame" x="121" y="437.5" width="172" height="21"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Z6-Cv-vtz" customClass="AnimationView">
+                    <rect key="frame" x="52" y="164" width="311" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="vav-OU-B12"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em desenvolvimento..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmw-KY-05S">
+                    <rect key="frame" x="52" y="372" width="311" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -26,11 +34,15 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="Pmw-KY-05S" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bFU-fC-SOe"/>
-                <constraint firstItem="Pmw-KY-05S" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jT5-xe-lCQ"/>
+                <constraint firstItem="1Z6-Cv-vtz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="Qog-XH-SaL"/>
+                <constraint firstItem="Pmw-KY-05S" firstAttribute="trailing" secondItem="1Z6-Cv-vtz" secondAttribute="trailing" id="Zly-yy-bET"/>
+                <constraint firstItem="Pmw-KY-05S" firstAttribute="top" secondItem="1Z6-Cv-vtz" secondAttribute="bottom" constant="8" id="aSt-7P-Pqc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Z6-Cv-vtz" secondAttribute="trailing" constant="51" id="bMF-lk-LQq"/>
+                <constraint firstItem="1Z6-Cv-vtz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="52" id="f5U-cB-MvG"/>
+                <constraint firstItem="Pmw-KY-05S" firstAttribute="leading" secondItem="1Z6-Cv-vtz" secondAttribute="leading" id="vMm-E5-tzJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="112"/>
+            <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
         </view>
     </objects>
 </document>
